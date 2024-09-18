@@ -1,24 +1,26 @@
 /* Sidebar */
+
 .wrapper {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
   height: auto;
   width: 100vw;
-  color: rgb(201,195,195);
+  color: #F7F6F6;
+  
   
 }
 #openCloseBtn {
   display: block;
-  width: 25px;
-  height: 35px;
+  width: 45px;
+  height: 55px;
   position: fixed;
   left: 20px;
   top: 0;
   color: steelblue;
   background-color: transparent;
   border:none;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   z-index: 20;
   cursor: pointer;
   transform: rotate(45deg);
@@ -36,11 +38,12 @@
   left: -197px;
   transition: left 0.5s;
   fill: 1;
-  font-size: 10px;
+  
   
 }
 .sidebar .logo {
   display: flex;
+  padding-top: 50px;
   width: 100%;
   height: 100px;
   align-items: center;
@@ -60,7 +63,7 @@
   margin-left: 320px;
 }
 .sidebar.active #openCloseBtn{
-  left: 270px;
+  left: 160px;
   transform: rotate(360deg);
 }
 
@@ -69,12 +72,13 @@
 .sidebar__menu_list {
   /* border: 1px solid red; */
   list-style: none;
+  
   width: 90%;
   margin-top: 50px;
   margin-bottom: 50px;
   font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
 }
-ul li:not(:nth-child(1)) {
+ul .sidebar__menu_list:not(:nth-child(1)) {
   
   overflow: hidden;
 }
@@ -83,47 +87,66 @@ ul li:not(:nth-child(1)) {
 
 .material-symbols-outlined{
   font-size: 18px;
+  
 }
 .sidebar__menu_list-item .sidebar__menu_list-item-link  {
-  display: block;
+  display: flex;
+  font-family:"Source Sans 3";
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
-  color: whitesmoke
+  color: whitesmoke;
+  font-weight: 400;
   font-size: 18px;
   padding: 7px 20px;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
-ul li a:hover {
+.sidebar__menu_list .sidebar__menu_list a:hover {
   background-color: rgb(17,138,236);
   color: #eee;
 }
-ul li a i {
+.sidebar__menu_list .sidebar__menu_list a i {
   display: inline-block;
   width: 20px;
   margin-right: 15px;
   text-align: center;
+  
+  align-self: center;
 }
 
 /* Second Menu */
-ul.user-menu li {
+.sidebar__menu_list .userMenu .userMenu__item {
   margin-bottom: 15px;
 }
-ul.user-menu li a {
+.sidebar__menu_list .userMenu .userMenu__item a {
   padding: 5px 20px;
   border-radius: 20px;
   text-align: center;
+  
+  
 }
-.login-btn {
-  background-color: rgb(173,59,59);
-  color: white;
+
+.userMenu{
+  justify-self: flex-end;
+  font-size: 18px;
+  font-family: "Source Sans 3";
+  list-style: none;
+  
+  text-decoration: none;
 }
-.login-btn:hover {
-  background-color: rgb(121,28,28);
+
+.debar__menu_list-item-link{
+  gap: 10px;
 }
-.reg-btn {
-  background-color:aquamarine;
-  color: black;
+.userMenu__item_text {
+  
+  color: gray;
+  text-decoration: none;
 }
+
+
+
 .reg-btn:hover {
   background-color: rgb(51,175,134);
   color: black;
@@ -134,6 +157,7 @@ ul.user-menu li a {
   flex-flow: column;
   align-self: center;
 }
+
 /* Horizontal Rules */
 hr {
   display: block;
@@ -164,9 +188,9 @@ footer {
   transition: width 0.5s, margin 0.5s;
 }
 .content p {
-  margin-bottom: 20px;
+  margin:42px 50px 27px ;
 }
-/* ------------sidbarend-------------- */
+/* ------------sidbar end-------------- */
 main{
   color: black;
 }
@@ -187,7 +211,7 @@ main{
 
 .header__info{
     display: flex;
-    align-items: center;
+    
     justify-content: space-between;
     gap:25px;
     
@@ -278,3 +302,25 @@ main{
     outline: none;
     
   }
+
+  /* Наполнение */
+  .Insights{
+    background-color: white;
+    width: 740px;
+    max-height: 230px;
+    box-shadow: 5px 5px 5px 2px lightgrey;
+    border-radius: 3%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F6F6;
+  }
+
+  .Insights__head{
+    display: flex;
+    justify-content: space-between;
+    max-height: 230px;
+    padding: 0 50px;
+  }
+  
+  
